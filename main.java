@@ -212,18 +212,7 @@ public class Main {
         BlockChain myBlockChain = null;
 
         File file = new File("blockchain.txt");
-
-        /*if(file.exists()) {
-            myBlockChain = (BlockChain)SerializationUtils.deserialize("blockchain.txt");
-            //System.out.println("blockchain already exists");
-        } else {
-            try {
-                file.createNewFile();
-                myBlockChain = new BlockChain(blockChainLength);
-            } catch (IOException e) {
-                System.out.println("Cannot create the file: " + file.getPath());
-            }
-        }*/
+        
 
         try {
             file.createNewFile();
@@ -247,43 +236,7 @@ public class Main {
             System.out.println();
         }
 
-        /*System.out.println("===================================================================");
-        BlockChain readBlockChain = (BlockChain)SerializationUtils.deserialize("blockchain.txt");
-        System.out.println(myBlockChain.getBlockChain().get(0).toString());
-*/
 
-
-/*
-        int proceedingNumberOfZeros = 2; // to be removed
-
-        int blockChainLength = 5;
-        BlockChain myBlockChain = new BlockChain(blockChainLength);
-
-        for (int i = 0; i < 2; i++) {
-            int start = LocalTime.now().toSecondOfDay();
-            myBlockChain.addBlock(proceedingNumberOfZeros);
-            int stop = LocalTime.now().toSecondOfDay();
-            System.out.println(myBlockChain.getBlockChain().get(i).toString());
-            System.out.println("Block was generating for " +  (stop - start) + " seconds");
-            System.out.println();
-        }
-
-*/
-
-
-        //print blockchain data
-/*        if (myBlockChain.validateBlockChain()) {
-            for (int i = 0; i < myBlockChain.getBlockChain().size(); i++) {
-                System.out.println("Block:");
-                System.out.println("Id: " + myBlockChain.getBlockChain().get(i).getId());
-                System.out.println("Timestamp: " + myBlockChain.getBlockChain().get(i).getTimeStamp());
-                System.out.println("Hash of the previous block:");
-                System.out.println(myBlockChain.getBlockChain().get(i).getPreviousHash());
-                System.out.println("Hash of the block:");
-                System.out.println(myBlockChain.getBlockChain().get(i).getHash());
-                System.out.println();
-            }
-        }*/
     }
 }
 
